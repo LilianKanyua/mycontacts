@@ -23,6 +23,7 @@ class AddContact : AppCompatActivity() {
         var error = false
 
         if (name.isBlank()) {
+
             binding.etAddName.error
 //            binding.tilAddName.error = "Name is required"
             error = true
@@ -33,6 +34,16 @@ class AddContact : AppCompatActivity() {
         }
         if (email.isBlank()) {
             binding.etAddEmail.error = "Email is required"
+            binding.tilAddName.error = "Name is required"
+            error = true
+        }
+        if (number.isBlank()) {
+            binding.tilAddNumber.error = "Number is required"
+            error = true
+        }
+        if (email.isBlank()) {
+            binding.tilAddEmail.error = "Email is required"
+
             error = true
         }
         if (!error) {
